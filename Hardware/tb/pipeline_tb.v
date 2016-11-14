@@ -6,15 +6,15 @@ reg reset;
 reg [`SCREEN_X_BITWIDTH:0] screen_x;
 reg [`SCREEN_Y_BITWIDTH:0] screen_y;
 
-wire [`CAMERA_PIXEL_BITWIDTH:0] pixel;
+reg [`CAMERA_PIXEL_BITWIDTH:0] pixel;
 
 wire [`RECT_OUT_BITWIDTH:0] rect1;
-wire [`RECT_OUT_BITWIDTH:0] rect2;
-wire [`RECT_OUT_BITWIDTH:0] rect3;
-wire [`RECT_OUT_BITWIDTH:0] rect4;
-wire [`RECT_OUT_BITWIDTH:0] rect5;
-wire [`RECT_OUT_BITWIDTH:0] rect6;
-wire [`RECT_OUT_BITWIDTH:0] rect7;
+//wire [`RECT_OUT_BITWIDTH:0] rect2;
+//wire [`RECT_OUT_BITWIDTH:0] rect3;
+//wire [`RECT_OUT_BITWIDTH:0] rect4;
+//wire [`RECT_OUT_BITWIDTH:0] rect5;
+//wire [`RECT_OUT_BITWIDTH:0] rect6;
+//wire [`RECT_OUT_BITWIDTH:0] rect7;
 wire [`RECT_OUT_BITWIDTH:0] rect0;
 
 parameter X_RES_MAX = 600;
@@ -28,12 +28,12 @@ top top_inst(
   .screen_y_pos(screen_y),
   .test_pixel(pixel),
   .rect1(rect1),
-  .rect2(rect2),
-  .rect3(rect3),
-  .rect4(rect4),
-  .rect5(rect5),
-  .rect6(rect6),
-  .rect7(rect7),
+//  .rect2(rect2),
+//  .rect3(rect3),
+//  .rect4(rect4),
+//  .rect5(rect5),
+//  .rect6(rect6),
+//  .rect7(rect7),
   .rect0(rect0)
 );
 
@@ -44,12 +44,12 @@ end
 initial begin
   clock = 1'b0;
   reset = 1'b1;
-  //pixel = 9'b001000000; // 0.25
+  pixel = 9'b001000000; // 0.25
   
   #1000000 $stop;
 end
 
-assign pixel = screen_x;
+//assign pixel = screen_x;
 
 always@(posedge clock) begin
   if(screen_x < X_RES_MAX) begin

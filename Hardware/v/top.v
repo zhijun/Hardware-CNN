@@ -10,12 +10,12 @@ module top(
   // hex outputs
   
   output [`RECT_OUT_BITWIDTH:0] rect1,
-  output [`RECT_OUT_BITWIDTH:0] rect2,
-  output [`RECT_OUT_BITWIDTH:0] rect3,
-  output [`RECT_OUT_BITWIDTH:0] rect4,
-  output [`RECT_OUT_BITWIDTH:0] rect5,
-  output [`RECT_OUT_BITWIDTH:0] rect6,
-  output [`RECT_OUT_BITWIDTH:0] rect7,
+//  output [`RECT_OUT_BITWIDTH:0] rect2,
+//  output [`RECT_OUT_BITWIDTH:0] rect3,
+//  output [`RECT_OUT_BITWIDTH:0] rect4,
+//  output [`RECT_OUT_BITWIDTH:0] rect5,
+//  output [`RECT_OUT_BITWIDTH:0] rect6,
+//  output [`RECT_OUT_BITWIDTH:0] rect7,
   output [`RECT_OUT_BITWIDTH:0] rect0
 );
 
@@ -60,12 +60,12 @@ wire fm_buffer_full;
 // FOR TESTING
 assign rect0 = rectified_vector[0];
 assign rect1 = rectified_vector[1];
-assign rect2 = rectified_vector[2];
-assign rect3 = rectified_vector[3];
-assign rect4 = rectified_vector[4];
-assign rect5 = rectified_vector[5];
-assign rect6 = rectified_vector[6];
-assign rect7 = rectified_vector[7];
+//assign rect2 = rectified_vector[2];
+//assign rect3 = rectified_vector[3];
+//assign rect4 = rectified_vector[4];
+//assign rect5 = rectified_vector[5];
+//assign rect6 = rectified_vector[6];
+//assign rect7 = rectified_vector[7];
 parameter BUFFER_X_POS = `SCREEN_X_WIDTH'd0;
 parameter BUFFER_Y_POS = `SCREEN_Y_WIDTH'd0;
 
